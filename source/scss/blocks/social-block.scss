@@ -5,6 +5,11 @@
     .social-block__list {
       opacity: 1;
       pointer-events: auto;
+      li{
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.2s ease-out;
+      }
     }
   }
 }
@@ -49,6 +54,8 @@
     color: $c-purple;
 
     &::before {
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
       width: 112.5%;
       height: 112.5%;
     }
@@ -130,6 +137,7 @@
   &:hover {
     opacity: 1;
     pointer-events: auto;
+    transition-duration: 0.3s;
   }
 
   &:focus-within {
@@ -145,7 +153,8 @@
   li {
     flex: none;
     margin-bottom: 0.5rem;
-
+    opacity: 0;
+    transform: scale(0);
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
     }
@@ -186,6 +195,7 @@
 
   &:hover {
     color: $c-purple;
+    transition-duration: 0.3s;
   }
 
   &:focus {
