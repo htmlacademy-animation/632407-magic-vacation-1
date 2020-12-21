@@ -46,7 +46,7 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
-
+  animation: showFooter 1.5s ease-in-out;
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
     height: 3.5rem;
@@ -72,10 +72,10 @@
 
 .screen__footer-wrapper {
   @include container;
-
+  
   @media (max-width: $tablet) and (orientation: portrait) {
     opacity: 0;
-
+    
     .screen__footer--full & {
       opacity: 1;
     }
@@ -354,3 +354,18 @@
 .screen--rules {
   background-color: $c-dark;
 }
+
+
+  // .screen__footer-wrapper {
+  //   height: 60px;
+  // }
+  @keyframes showFooter {
+    0%{
+      bottom: -60px;
+    }
+    100%{
+      bottom: 0;
+    }
+  }
+
+
