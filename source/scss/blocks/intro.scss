@@ -72,7 +72,8 @@
   flex: none;
   width: 50rem;
   max-width: 50%;
-
+  opacity: 0;
+  transition-duration: 1.5s;
   @media (min-width: $stop-scaling) {
     width: 500px;
   }
